@@ -1,0 +1,71 @@
+﻿@model IEnumerable<DineTime.Models.Reservation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<header>
+    <nav class="navbar">
+        <a id="logo-link" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <img id="dinetime-logo" alt="Logo" src="~/contents/svg_assets/logo_icon.svg" />
+        </a>
+    </nav>
+</header>
+
+<h1>Reservations</h1>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservationTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberInParty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Client)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restaurant)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationDate.Date.Day)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberInParty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Client.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Restaurant.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ReservationId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ReservationId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReservationId">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<a asp-controller="Clients" asp-action="Index">Users</a>
+

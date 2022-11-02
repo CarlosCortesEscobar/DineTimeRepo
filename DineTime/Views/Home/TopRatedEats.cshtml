@@ -1,0 +1,111 @@
+@{
+    ViewData["Title"] = "Top Rated Page";
+}
+
+<header>
+    <nav class="navbar">
+        <a id="logo-link" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <img id="dinetime-logo" alt="Logo" src="~/contents/svg_assets/logo_icon.svg" />
+        </a>
+    </nav>
+</header>
+
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Current Top Rated Restaurants:</h3>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="h3">
+                1st
+            </div>
+            <div class="Restaurant2">
+                <div class="restaurantName">
+                    La Casa Tacos
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="restaurantImage">
+                            <img id="mexi-img" src="~/contents/images/tacos.png" width="85" height="85">
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="restaurantType">
+                            &#9733 &#9733 &#9733 &#9733 &#9733
+                            <div class="reviewNum">
+                                76 reviews
+                            </div>
+                            Taqueria
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <a id="res-now-btn" asp-controller="Reservations" asp-action="LaCasaReservation">Reserve Now</a>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="h3">
+                2nd
+            </div>
+            <div class="Restaurant1">
+                <div class="restaurantName">
+                    Fieri's Bar & Grill
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="restaurantImage">
+                            <img id="bg-img" src="~/contents/images/burgle2.png" width="85" height="85">
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="restaurantType">
+                            &#9733 &#9733 &#9733 &#9733 &#9734
+                            <div class="reviewNum">
+                                151 reviews
+                            </div>
+                            Steakhouse
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <a id="res-now-btn" asp-controller="Reservations" asp-action="FieriReservation">Reserve Now</a>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="h3">
+                3rd
+            </div>
+            <div class="Restaurant3">
+                <div class="restaurantName">
+                    Santana Sandwiches
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="restaurantImage">
+                            <img id="ital-img" src="~/contents/images/santana_sandwich.png" width="85" height="85">
+                        </div>
+                    </div>
+                    <div class="col-sm-7">
+                        <div class="restaurantType">
+                            &#9733 &#9733 &#9733 &#9733 &#9734
+                            <div class="reviewNum">
+                                58 reviews
+                            </div>
+                            Sandwich
+                        </div>
+                    </div>
+                </div>
+                <p></p>
+                <a id="res-now-btn" asp-controller="Reservations" asp-action="SantanaReservation">Reserve Now</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
