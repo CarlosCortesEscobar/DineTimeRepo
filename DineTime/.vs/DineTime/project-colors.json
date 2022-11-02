@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9f00d562-7b64-4705-a34c-95d36d9fa4e9": {
+      "ProjectGuid": "9f00d562-7b64-4705-a34c-95d36d9fa4e9",
+      "DisplayName": "DineTime",
+      "ColorIndex": 0
+    },
+    "3cdac913-6567-4cac-a214-d4c661e46308": {
+      "ProjectGuid": "3cdac913-6567-4cac-a214-d4c661e46308",
+      "DisplayName": "DineTime",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "eeb17e86-9410-44db-8471-2399b15231d9": {
+      "ProjectGuid": "eeb17e86-9410-44db-8471-2399b15231d9",
+      "DisplayName": "DineTime.Tests",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

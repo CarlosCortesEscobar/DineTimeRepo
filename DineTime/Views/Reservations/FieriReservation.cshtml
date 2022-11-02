@@ -1,0 +1,142 @@
+@model DineTime.Models.Reservation
+
+
+@{
+    ViewData["Title"] = "Make a Reservation";
+}
+
+<header>
+    <nav class="navbar">
+        <a id="logo-link" class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+            <img id="dinetime-logo" alt="Logo" src="~/contents/svg_assets/logo_icon.svg" />
+        </a>
+    </nav>
+</header>
+
+
+<div class="container" id="testres">
+    <div class="row">
+    <div class="col">
+        <figure>
+            <img src="~/contents/images/burgle2.png" alt="">
+        </figure>
+        <ul id="left-group" class="list-group" name="res-fillout">
+            <li class="list-group-item" id="res-header">
+                Make a reservation
+            </li>
+            <li class="list-group-item">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    @Html.Hidden("RestaurantId", 3)
+                    
+                    @Html.Hidden("ClientId", 1)
+                    
+                    <div id="date-time-div" class="form-group">
+                        <label asp-for="ReservationDate" class="control-label">Date & Time</label>
+                        <input asp-for="ReservationDate" class="form-control" />
+                        <span asp-validation-for="ReservationDate" class="text-danger" ></span>
+                    </div>
+                    <div id="party-size-div" class="form-group">
+                        <label asp-for="NumberInParty" class="control-label">Party Size</label>
+                        <input asp-for="NumberInParty" class="form-control" />
+                        <span asp-validation-for="NumberInParty" class="text-danger"></span>
+                    </div>
+                    <div id="create-btn" class="form-group">
+                        <input id="sub-res" type="submit" value="Reserve Now" class="btn btn-primary" />
+                    </div>
+                </form>
+            </li>
+        </ul>
+        <br>
+    </div>
+    <div class="col">
+        <div id="whole-card" class="card">
+            <h3 id="res-name" class="card-title">Fieri's Bar & Grill <span id="bkmrk"> <img src="~/contents/svg_assets/bookmark_icon.svg" alt=""></span></h3>
+            <h5 class="card-subtitle mb-2 text-muted">349 Monmouth Ave N. Monmouth OR, 97361</h5>
+            <p></p>
+            <h6 class="card-subtitle "> 
+                <span>
+                    <img src="~/contents/svg_assets/cutlery_icon.svg" alt="">
+                </span> 
+                Steakhouse / Grill  </h6>
+            <p></p>
+            <ul class="list-group list-group-horizontal list-group-flush">
+                <li class="list-group-item"><h5 id="overview" style="color:#B5464C; text-decoration:underline;">Overview</h5></li>
+                <li class="list-group-item"><h5 class="text-muted" id="photos">Photos</h5></li>
+                <li class="list-group-item"><h5 class="text-muted" id="menu">Menu</h5></li>
+                <li class="list-group-item"><h5 class="text-muted" id="reviews">Reviews</h5></li>
+            </ul>
+            <p></p>
+            <div id="overview-card" class="card">
+                <h3 id="stars" class="card-title">★★★★☆</h3>
+                <span></span>
+                <h5  id="ov-sub" class="card-subtitle">
+                    <span>
+                        <img src="~/contents/svg_assets/review_icon.svg" alt="">
+                    </span>
+
+                    <span> </span>
+                    <span> </span>
+
+                    151 Reviews</h5>
+
+                <p></p>
+
+                <h4  id="ov-sub"  class="card-subtitle">
+                    Most recent review
+                </h4>
+
+                <h5  id="ov-subr"  class="card-subtitle">
+                    "Great burgers and a huge selection of drinks, try their ribeye!" - George W.
+                </h5>
+
+                <p></p>
+
+                <h4  id="ov-sub"  class="card-subtitle">
+                    Pricing
+                </h4>
+                <h5  id="ov-sub"  class="card-subtitle">
+                    <span>
+                        <img src="~/contents/svg_assets/money_icon.svg" alt="">
+                    </span>
+
+                    <span> </span>
+                    <span> </span>
+
+                    $12 to $50
+
+                </h5>
+
+                <p></p>
+
+                <h4  id="ov-sub"  class="card-subtitle">
+                    Popular Dishes
+                </h4>
+
+                <ul class="list-group list-group-horizontal list-group-flush">
+                    <li class="list-group-item" >Western Deluxe Burger</li>
+                    <li class="list-group-item" >Honey-glazed NY Strip</li>
+                    <li class="list-group-item" >Bloomin' Onion</li>
+                </ul>
+
+                <br>
+
+                <h4  id="ov-sub"  class="card-subtitle">
+                    Common Tags
+                </h4>
+
+                <ul class="list-group list-group-horizontal">
+                    <li class="list-group-item" > Spacious </li>
+                    <li class="list-group-item" > Sports </li>
+                    <li class="list-group-item" > Country </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+<script src="~/wwwroot/js/site.js"></script>
